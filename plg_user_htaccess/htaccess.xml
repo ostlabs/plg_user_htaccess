@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="user">
+	<name>User - htaccess sync</name>
+	<author>OSTLabs Inc</author>
+	<creationDate>Sept 2010</creationDate>
+	<copyright>Copyright (C) 2010 OSTLabs Inc. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@ostlabs.com</authorEmail>
+	<authorUrl>www.ostlabs.com</authorUrl>
+	<version>1.0</version>
+	<description>Simple plugin to create/sync joomla passwords with .htaccess files.o</description>
+	<files>
+		<filename plugin="htaccess">htaccess.php</filename>
+	</files>
+	<params>
+	    <param name="htaccess_path" type="text" default="" label="Path to .htaccess file" description="The full path to the .htaccess file" />
+	    <param name="encryption" type="radio" default="1" label="Encryption Type" description="Defines the type of encruption to use. Make sure your server supports the type selected. If in doubt, use the default. (1 - Crypt)">
+		<option value="1">Crypt</option>
+		<option value="2">SHA1</option>
+		<option value="3">Salted SHA1</option>
+	    </param>
+	    <param name="AutoAdd" type="radio" default="1" label="Auto Create Users in htaccess file" description="If the user is not found in the .htaccess file it will auto add the user.">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	    </param>
+	    <param name="AutoDelete" type="radio" default="0" label="Delete Users on J! Delete" description="If the user is deleted in Joomla!, we should delete them from the .htaccess file">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	    </param>
+	</params>
+</install>
